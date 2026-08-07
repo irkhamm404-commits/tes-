@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<div class="background">
+
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+    <div class="blur blur3"></div>
+
+    <canvas id="particles"></canvas>
+
+</div>
+
+<div class="container">
+
+    <div class="login-card">
+
+        <div class="logo">
+
+            <div class="logo-circle">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h2>CodingXOndev</h2>
+
+            <p>Silahkan login untuk melanjutkan</p>
+
+        </div>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+
+                <label>Username</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Masukkan Username"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Masukkan Password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="toggle">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="options">
+
+                <label class="remember">
+
+                    <input type="checkbox">
+
+                    Remember Me
+
+                </label>
+
+                <a href="#">Lupa Password?</a>
+
+            </div>
+
+            <button
+                class="login-btn"
+                id="loginButton">
+
+                <span class="text">
+
+                    Login
+
+                </span>
+
+                <span class="loader"></span>
+
+            </button>
+
+        </form>
+
+        <div class="divider">
+
+            <span>ATAU</span>
+
+        </div>
+
+        <div class="social-login">
+
+            <button class="social google">
+
+                <i class="fab fa-google"></i>
+
+            </button>
+
+            <button class="social github">
+
+                <i class="fab fa-github"></i>
+
+            </button>
+
+            <button class="social discord">
+
+                <i class="fab fa-discord"></i>
+
+            </button>
+
+        </div>
+
+        <div class="footer">
+
+            © 2026 CodingXOndev
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="js/particles.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+  </html>
