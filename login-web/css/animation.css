@@ -1,0 +1,407 @@
+/* ===========================
+   GLOBAL ANIMATION
+=========================== */
+
+.login-card{
+
+    animation:cardShow .9s ease;
+
+}
+
+.logo{
+
+    animation:fadeDown 1s ease;
+
+}
+
+.input-group{
+
+    animation:fadeUp .9s ease;
+
+}
+
+.login-btn{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.social-login{
+
+    animation:fadeUp 1.4s ease;
+
+}
+
+.footer{
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+@keyframes cardShow{
+
+    from{
+
+        opacity:0;
+        transform:
+        translateY(35px)
+        scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+/* ===========================
+   FADE DOWN
+=========================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   FADE UP
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   FLOATING LOGO
+=========================== */
+
+.logo-circle{
+
+    animation:
+
+    floating 4s ease-in-out infinite,
+
+    glowPulse 3s ease infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+@keyframes glowPulse{
+
+    0%{
+
+        box-shadow:
+        0 0 20px rgba(91,124,255,.35);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 45px rgba(91,124,255,.70);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 20px rgba(91,124,255,.35);
+
+    }
+
+}
+
+/* ===========================
+   INPUT EFFECT
+=========================== */
+
+.input-box{
+
+    transition:.35s;
+
+}
+
+.input-box:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.input-box input{
+
+    transition:
+
+    border .3s,
+
+    box-shadow .3s,
+
+    background .3s,
+
+    transform .3s;
+
+}
+
+.input-box input:focus{
+
+    transform:scale(1.01);
+
+}
+
+/* ===========================
+   BUTTON EFFECT
+=========================== */
+
+.login-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.login-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+}
+
+.login-btn:hover::before{
+
+    animation:shine .8s;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:150%;
+
+    }
+
+}
+
+/* ===========================
+   SOCIAL BUTTON
+=========================== */
+
+.social{
+
+    transition:
+
+    transform .35s,
+
+    background .35s,
+
+    box-shadow .35s;
+
+}
+
+.social:hover{
+
+    transform:
+
+    translateY(-6px)
+    scale(1.08);
+
+    box-shadow:
+
+    0 0 20px rgba(91,124,255,.35);
+
+}
+
+/* ===========================
+   LINK
+=========================== */
+
+.options a{
+
+    transition:.3s;
+
+}
+
+.options a:hover{
+
+    color:#8B5CFF;
+
+}
+
+/* ===========================
+   BLUR BACKGROUND
+=========================== */
+
+.blur1{
+
+    animation:moveBlur1 12s linear infinite alternate;
+
+}
+
+.blur2{
+
+    animation:moveBlur2 16s linear infinite alternate;
+
+}
+
+.blur3{
+
+    animation:moveBlur3 10s linear infinite alternate;
+
+}
+
+@keyframes moveBlur1{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(80px,40px);
+
+    }
+
+}
+
+@keyframes moveBlur2{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-80px,-50px);
+
+    }
+
+}
+
+@keyframes moveBlur3{
+
+    from{
+
+        transform:
+
+        translate(-50%,-50%);
+
+    }
+
+    to{
+
+        transform:
+
+        translate(-45%,-55%);
+
+    }
+
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+#toast{
+
+    transition:
+
+    opacity .35s,
+
+    transform .35s;
+
+}
